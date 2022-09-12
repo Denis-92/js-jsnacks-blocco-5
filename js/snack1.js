@@ -38,16 +38,19 @@ const containerSquadre = [
     },
 ];
 
-//containerSquadre.forEach(element, index, array) => { }
-
 containerSquadre.forEach(element => {
     //console.log(element.nome);
     element.puntiFatti = numberRandom();
     element.falliSubiti = numberRandom();
     if (element.puntiFatti === 1) {
-        console.log(`La squadra ${element.nome} ha fatto ${element.puntiFatti} punto e ha subito ${element.falliSubiti} falli.`);
+        console.log(`La squadra ${element.nome} ha fatto ${element.puntiFatti} punto`);
     } else {
-        console.log(`La squadra ${element.nome} ha fatto ${element.puntiFatti} punti e ha subito ${element.falliSubiti} falli.`);
+        console.log(`La squadra ${element.nome} ha fatto ${element.puntiFatti} punti`);
+    }
+    if (element.falliSubiti === 1) {
+        console.log(` e ha subito ${element.falliSubiti} fallo.`);
+    } else {
+        console.log(` e ha subito ${element.falliSubiti} falli.`);
     }
 
 });
